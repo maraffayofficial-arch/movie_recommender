@@ -2,7 +2,11 @@ import streamlit as st
 import pickle as pkl
 import pandas
 import requests
+import os
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 
 st.title("Movie Recommendation System")
 
@@ -12,7 +16,7 @@ similarity=pkl.load(open("similarities.pkl","rb"))
 movies_list=new_df['title'].values
 
 # TMDB API Configuration
-TMDB_API_KEY = "e767d1397d022156ec4e7c366870bea2"  # Replace with your TMDB API key
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
 def fetch_poster(movie_id):
     """Fetch movie poster from TMDB API"""
