@@ -6,6 +6,10 @@ env/
 # Environment variables
 .env
 
+# Large pickle files
+similarities.pkl
+movies.pkl
+
 # Python cache
 __pycache__/
 *.py[cod]
