@@ -6,9 +6,9 @@ env/
 # Environment variables
 .env
 
-# Large pickle files
-similarities.pkl
-movies.pkl
+# Large pickle files will be tracked by Git LFS
+# similarities.pkl
+# movies.pkl
 
 # Python cache
 __pycache__/
